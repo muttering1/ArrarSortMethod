@@ -1,0 +1,48 @@
+package J2SEInDoor;
+
+import java.util.*;
+/*对一个数组里面的数值进行排序
+ * 用Java.util.Array.sort方法进行排序
+ * 
+ * */
+public class ArraySort {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("请输入五位学员的成绩\n");
+		
+		int [] a = new int[5];
+		
+		for(int i = 0;i < a.length ;i++){
+			
+			System.out.println("请输入第"+(i+1)+"位学员的成绩\t");
+			
+			a[i] = sc.nextInt();
+			
+		}
+		
+		System.out.println("您输入的五位学员成绩排序前为：");
+		
+		for(int i =0;i < a.length;i++){
+			
+			System.out.print(a[i]+"\t");
+			
+		}
+		
+		Arrays.sort(a);
+		
+		System.out.println("\n您输入的五位学员成绩排序后为：");
+		
+		for(int i =0;i < a.length;i++){
+			
+			System.out.print(a[i]+"\t");
+			
+		}
+		
+		
+	}
+	
+	
+}
