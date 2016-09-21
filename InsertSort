@@ -1,0 +1,65 @@
+package J2SEInDoor;
+/*插入排序算法
+ * 比较a[0]与a[1]的值，然后再比较a[2]与a[1]的值的大小
+ * insert方法有返回值，所以用return语句
+ * 
+ * */
+public class ArrayInsertSort {
+
+	public static void main(String[] args) {
+		
+		int [] a = {32,44,887,34,123,9,121,333,456,1};
+		
+		System.out.println("未排序前的数组：");
+		
+		for(int i = 0;i < a.length;i++){
+			
+			System.out.println(a[i]+" ");
+			
+		}
+		//将排序方法赋值给a
+		a = insertSort(a);
+		
+		System.out.println(" ");
+		
+		System.out.println("排序后的数组：");
+		
+		for(int i = 0; i< a.length;i++){
+			
+			System.out.println(a[i]+" ");
+			
+		}
+		
+	}
+	//交换变量的方法
+	public static void swap(int x[],int a,int b){
+		
+		int t = x[a];
+		
+		x[a] = x[b];
+		
+		x[b] = t;
+		
+	}
+	//方法的返回值类型是个数组，参数列表也是数组
+	public static int [] insertSort(int[] a){
+		
+		for(int i = 0; i < a.length;i++){
+			
+			for(int j = i; j > 0 && a[j-1] > a[j]; j--){
+				//swap方法
+				swap(a,j,j-1);
+				
+			}
+			
+		}
+		
+		return a;
+		
+	}
+	
+	
+	
+	
+	
+}
