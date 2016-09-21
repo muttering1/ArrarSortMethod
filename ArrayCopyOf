@@ -1,0 +1,63 @@
+package J2SEInDoor;
+
+import java.util.Arrays;
+
+/*实现数组的复制
+ * 
+ * */
+public class ArrayCopyof {
+
+	public static void main(String[] args) {
+		
+		int a [] = {1,5,7,9,3,6};
+		
+		int [] b = new int[12];
+		
+		System.out.println("开始复制前数组a中的元素是：");
+		
+		for(int i = 0; i < a.length; i++){
+			
+			System.out.print(a[i]+ "  ");
+			
+		}
+		
+		System.out.println("\n开始赋值前b数组中的元素是：");
+		
+		for(int i = 0; i < b.length; i++){
+			
+			System.out.print(b[i]+" ");
+		
+		}
+		
+		Arrays.copyOf(a, 0);
+		//此方法无法使用
+//		System.arraycopy(a, 1, b, 4, 6);
+		
+		System.out.println(" ");
+		
+		System.out.println("复制后b数组中的元素为：");
+		
+		for(int i = 0 ; i < b.length; i++){
+			
+			System.out.print(b[i]+" ");
+			
+		}
+		//实现简单的数组复制
+		int [] c = {3,5,7,9,1};
+		
+		int [] d =new int [c.length];
+		
+		System.out.println("\nb数组复制后的值为：");
+		
+		for(int i =0; i < c.length ; i++){
+			
+			d[i] = c[i]; 
+			
+			System.out.print(d[i]+" ");
+		}
+		
+		
+		
+	}
+
+}
